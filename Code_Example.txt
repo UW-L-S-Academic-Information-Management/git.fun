@@ -1,0 +1,88 @@
+#Clone repository from github
+git clone git@github.com:UW-L-S-Academic-Information-Management/git.fun.git
+
+#Check the status of the repository
+git status
+
+#Then make some changes to TEST1.txt and check status again
+
+#Add, and commit changes.
+git add TEXT1.txt
+git commit
+
+#Add multiple files and make different commits.
+#First check status, see that new files 
+#(computer.txt, math_script.R) are not being tracked
+git status
+
+#Let's first make another change to our text file
+#and then add and commit only the computer.txt and math_script.R
+
+git add computer.txt math_script.R
+git status
+git commit
+
+git status
+#Notice that this only commits what we had in the staging
+#so let's commit the changes we made to the text file.
+git add TEST1.txt
+git status
+git commit
+
+#Let's make some changes to the r script and picture file.
+
+
+#And then once we commit those look at the history.
+git log (q to exit)
+# or make this look a bit better
+git log --pretty=oneline
+#even better
+git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+#you can actually make aliases for long commands like this in .gitconfig
+
+
+
+#We can set our working files to a previous state at any time.
+#If you make a change to a file but have not yet staged
+git checkout TEST1.txt
+#If you have staged the change
+git add TEST1.txt
+git status
+git reset HEAD TEST1.txt
+git status
+git checkout TEST1.txt
+#If you have already committed the change
+git add TEST1.txt
+git commit
+git log
+git revert HEAD 
+#Going back to any previous state of the brach.
+#git checkout <hash> #(where <hash> is at least 7 characters 
+#from the start of the full hash)
+#We first find the hash value for the brach with the log
+git log
+git checkout 68b1536bb4
+#then to get back to the top of the branch
+#git checkout <branch name>
+git checkout master
+
+#Let's make a new branch at the first commit
+#with git branch <branch name> <hash>
+git log
+git branch fresh a110931
+#And then we can move to it
+#with git checkout <branch name>
+git checkout fresh
+
+#We can move back to the master branch
+git checkout master
+
+#Finally lets remove a file from the respository, add
+#this instructions file and push changes to the remote.
+git ls-files #to list files in the repository
+git rm computer.txt
+git add 
+
+
+
+
