@@ -94,6 +94,10 @@ git pull
 #Then push your changes to github
 git push
 
+#Note that if you want to push a specific branch (like "fresh")
+# git push origin <branch name>
+git push origin fresh
+
 #We will do other things such as merging branches in r-studio
 
 
