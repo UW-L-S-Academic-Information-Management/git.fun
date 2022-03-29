@@ -56,15 +56,18 @@ git add TEST1.txt
 git commit
 git log
 git revert HEAD 
-#Going back to any previous state of the brach.
+#Going back to any previous state of the branch.
 #git checkout <hash> #(where <hash> is at least 7 characters 
 #from the start of the full hash)
-#We first find the hash value for the brach with the log
+#We first find the hash value for the branch with the log
 git log
 git checkout 68b1536bb4
 #then to get back to the top of the branch
 #git checkout <branch name>
 git checkout master
+
+#We can also revert to a previous state with
+#git reset --hard <hash>
 
 #Let's make a new branch at the first commit
 #with git branch <branch name> <hash>
@@ -77,11 +80,24 @@ git checkout fresh
 #We can move back to the master branch
 git checkout master
 
-#Finally lets remove a file from the respository, add
+#Finally lets remove a file from the repository, add
 #this instructions file and push changes to the remote.
 git ls-files #to list files in the repository
 git rm computer.txt
-git add 
+git add Code_Example.txt
+git status
+git commit 
+
+#First pull any changes made by others to github
+git pull
+#Resolve any conflicts (we'll talk about if we have time)
+#Then push your changes to github
+git push
+
+#We will do other things such as merging branches in r-studio
+
+
+
 
 
 
