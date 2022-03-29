@@ -2,5 +2,6 @@ This is a test file.
 
 Some more test text.
 
-
 Let us make some additions to this file now.
+
+More changes that I have made.
